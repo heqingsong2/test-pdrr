@@ -12,7 +12,7 @@ import java.util.List;
 public class PdrController {
 
     @Resource
-    UserMapper userMapper;
+    UserMapper userMapper1;
 
     @RequestMapping("/p1")
     public String p1(){
@@ -22,6 +22,6 @@ public class PdrController {
     }
     @RequestMapping("/list")
     public List<BolgDetail> list(){
-        return userMapper.selectAll();
+        return userMapper1.selectAll();
     }
 }
