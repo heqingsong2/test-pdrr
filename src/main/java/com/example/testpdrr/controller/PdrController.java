@@ -15,7 +15,7 @@ public class PdrController {
     UserMapper userMapper;
 
     @RequestMapping("/p1")
-    public String p1(){
+    public String p111(){
         System.out.println("pdr......");
 
         return "p1";
