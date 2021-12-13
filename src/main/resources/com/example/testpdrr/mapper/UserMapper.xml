@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.testpdrr.mapper.UserMapper">
+
+    <insert id="inster1">
+        insert into blog_comment ( blogId, contend, createUser, createDate)
+        values (#{blogid},#{contend},#{createuser},#{createdate});
+    </insert>
+
+    <select id="login" resultType="com.hqs.pojo.User">
+        select * from user where userName=#{userName} and password=#{password}
+    </select>
+    <select id="selectAll" resultType="com.hqs.pojo.BolgDetail">
+        select * from bolg_detail order by createDate desc
+    </select>
+</mapper>
